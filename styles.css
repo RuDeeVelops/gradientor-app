@@ -1,0 +1,365 @@
+/* Global Variables */
+
+:root {
+  --transition-fast: 0.2s ease;
+  --box-shadow-light: 0 4px 1px rgba(15, 12, 12, 0.349);
+  --box-shadow-heavy: 0px 5px 1px rgb(15, 12, 12);
+  --border-radius-full: 9999px;
+  --border-radius-medium: 15px;
+  --border-radius-small: 5px;
+  --outline-heavy: 2px solid rgba(15, 12, 12, 0.671);
+  --outline-hover: 2px solid #000000c5;
+  --font-family-base: "Inter", sans-serif;
+  --font-medium: 500;
+  --font-defaultLineHeight: 137.5%;
+  --font-textLineHeight: 1.2;
+  --font-spacing: -0.02em;
+  --color-base: #070709;
+  --color-accent: #cca697;
+  --color-value: #d2e2c9;
+  --color-hex: #acc5da;
+  --background-color-base: #ffffff;
+  --background-color-dark: #2424246e;
+  --border-color-light: #e0e0e0;
+  --border-none: none;
+  --z-index-high: 10;
+  --font-size-responsive: clamp(1rem, 2vw, 1.1rem);
+  --font-size-responsive-small: clamp(1rem, 0.6vw, 1rem);
+  --width-responsive: clamp(100px, 50vw, 450px);
+  --width-responsiveMobile: clamp(80px, 50vw, 400px);
+  --width-responsiveXS: clamp(80px, 75vw, 400px);
+}
+
+/* ------------------------ Body Styles ------------------------ */
+/*
+  - The body is set to flex to center the content into a column layout.
+  - #instructions, #paletteButtons and #bottom are the three main sections of the page. Order 1, 2 and 3 respectively.
+  - #customTerminal and #builtBy are nested into the #bottom flex column section.
+  - We do this to be able to evenly distribute the #instructions, #paletteButtons, #customTerminal, and #builtBy sections.
+*/
+
+/* Reset Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+#instructions ul,
+#customTerminal p {
+  margin: 0;
+}
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: none;
+}
+
+/* ------------------------ Instructions Section ------------------------ */
+
+#instructions {
+  width: var(--width-responsive);
+  margin: 0; /* resets all margins */
+  margin-bottom: 20px;
+  order: 1;
+  display: block;
+  overflow: hidden;
+  list-style-type: none;
+  box-shadow: var(--box-shadow-light);
+  box-sizing: border-box;
+  border: var(--border-none);
+  background-color: var(--background-color-base);
+  padding: 20px;
+  border-radius: var(--border-radius-small);
+  color: var(--color-base);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-responsive);
+  text-align: center;
+  font-weight: var(--font-medium);
+  line-height: var(--font-textLineHeight);
+  letter-spacing: var(--font-spacing);
+  outline: var(--outline-heavy);
+}
+
+#instructions li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ------------------------ Palette Buttons Section ------------------------ */
+
+#paletteButtons {
+  width: var(--width-responsive);
+  margin-bottom: 20px;
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  z-index: var(--z-index-high);
+}
+
+.palette-button {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  font-size: var(--font-size-responsive);
+  padding: 0 22px;
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  line-height: 137.5%;
+  letter-spacing: -0.02em;
+  color: var(--color-base);
+  background-color: var(--background-color-base);
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--box-shadow-light);
+  transition: box-shadow var(--transition-fast);
+  outline: var(--outline-heavy);
+  border: var(--border-none);
+  cursor: pointer;
+}
+
+/* ------------------------ Bottom Section ------------------------ */
+
+/* The bottoms section wraps both the #customTerminal and #builtBy into a flex column layout */
+
+#bottom {
+  width: var(--width-responsive);
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0; /* resets all margins */
+  box-sizing: border-box;
+}
+
+/* ------------------------ Custom Terminal Section ------------------------ */
+
+#customTerminal {
+  order: 1;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow-light);
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+  outline: var(--outline-heavy);
+  background-color: var(--background-color-dark);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ------------------------ Built By Section ------------------------ */
+
+#builtBy {
+  order: 2;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  height: 2.75rem;
+  color: var(color-base);
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 16px;
+  padding: 0 22px;
+  font-weight: 500;
+  line-height: 137.5%;
+  letter-spacing: -0.02em;
+  background-color: var(--background-color-base);
+  white-space: nowrap;
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow-light);
+  outline: var(--outline-heavy);
+  border: var(--border-none);
+  cursor: pointer;
+}
+
+#builtBy .signature {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+/* ------------------------ Link styles ------------------------ */
+
+#builtBy a {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+}
+
+#builtBy a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+#builtBy a:hover::after {
+  transform: scaleX(1);
+  background-color: rgb(0, 0, 0);
+}
+
+#socialIcons a {
+  text-decoration: none;
+  position: static;
+}
+
+#socialIcons a i:hover {
+  transition: transform 0.5s;
+  transform: rotate(360deg);
+}
+
+/* ------------------------ Media Queries ------------------------ */
+
+@media screen and (max-width: 800px) {
+  .palette-button {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #instructions,
+  #paletteButtons,
+  #bottom {
+    width: var(--width-responsiveXS);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #builtBy p {
+    display: none;
+  }
+
+  #builtBy {
+    justify-content: center;
+  }
+
+  #instructions,
+  #paletteButtons {
+    font-size: var(--font-size-responsive-small);
+  }
+}
+
+@media screen and (max-width: 250px) {
+  #customTerminal p {
+    font-size: 11px;
+  }
+}
+
+/* ------------------------ Cursor Styles ------------------------ */
+
+.cursor-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color-light);
+  position: absolute;
+  pointer-events: none;
+  transition: transform var(--transition-fast);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.281);
+}
+
+.cursor-circle-hidden {
+  display: none;
+}
+
+/* ------------------------ Button Hover Styles ------------------------ */
+
+.palette-button:hover {
+  outline: var(--outline-hover);
+  box-shadow: var(--box-shadow-heavy);
+}
+
+.palette-button:active,
+.palette-button:focus,
+.palette-button.manualAnimation {
+  outline: var(--outline-hover);
+  box-shadow: var(--box-shadow-heavy);
+  animation: pulse 0.9s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* ------------------------ Miscellaneous Styles ------------------------ */
+
+#cssOutput {
+  text-align: center;
+  color: rgba(243, 243, 243, 0.733);
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 16px;
+}
+
+.property {
+  color: var(--color-accent);
+}
+
+.value {
+  color: var(--color-value);
+}
+
+.color {
+  color: var(--color-hex);
+}
+
+.terminalLine {
+  margin: 10px 0;
+}
+
+#cssOutput.copied-message {
+  color: white;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: normal;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A minimalist radial background generator. Just move your mouse and be inspired by infinite color possibilities! Brainchild of Rodolfo Fanti"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gradientor.app" />
+    <meta property="og:title" content="Gradientor - A minimalist, beautiful Radial Background Generator" />
+    <meta property="og:description" content="Move your mouse and be inspired by infinite color possibilities!" />
+    <meta property="og:image" content="/gradientor-app/media/openGraphGradiantor_landscape.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gradientor.app" />
+    <meta property="twitter:title" content="Gradientor - A minimalist, beautiful Radial Background Generator" />
+    <meta property="twitter:description" content="Move your mouse and be inspired by infinite color possibilities!" />
+    <meta property="twitter:image" content="/gradientor-app/media/openGraphGradiantor_landscape.jpg" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/gradientor-app/media/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/gradientor-app/media/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/gradientor-app/media/favicon-16x16.png" />
+    <link rel="manifest" href="/gradientor-app/media/site.webmanifest" />
+    <title>Gradientor - A minimalist, beautiful Radial Background Generator</title>
+  </head>
+
+  <body>
+    <ul id="instructions">
+      <li><i class="icon bx bx-mouse-alt"></i> MOVE your mouse</li>
+      <li><i class="icon bx bx-subdirectory-left"></i> ENTER to change color</li>
+      <li><i class="icon bx bxs-mouse"></i> SCROLL to change size</li>
+      <li><i class="icon bx bx-space-bar"></i> SPACEBAR to copy the CSS</li>
+    </ul>
+
+    <div id="paletteButtons">
+      <button class="palette-button" id="vibrantBtn">Vibrant</button>
+      <button class="palette-button" id="pastelBtn">Pastel</button>
+      <button class="palette-button" id="monochromaticBtn">Monochromatic</button>
+    </div>
+
+    <div id="bottom">
+      <div id="builtBy">
+        <p class="signature">
+          Gradientor - Built by
+          <a href="https://github.com/RuDeeVelops" target="_blank">Rodolfo Fanti</a>
+        </p>
+        <p>||</p>
+        <div id="socialIcons">
+          <a href="https://github.com/RuDeeVelops/gradientor-app" target="_blank">
+            <i class="icon bx bxl-github"></i>
+          </a>
+          <a href="https://twitter.com/3DRudy" target="_blank">
+            <i class="icon bx bxl-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="customTerminal">
+        <p id="cssOutput">background: radial-gradient(...);</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
