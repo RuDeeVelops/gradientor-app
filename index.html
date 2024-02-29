@@ -35,41 +35,42 @@
   </head>
 
   <body>
-    <ul id="instructions">
-      <li><i class="icon bx bx-mouse-alt"></i> MOVE your mouse</li>
-      <li><i class="icon bx bx-subdirectory-left"></i> ENTER to change color</li>
-      <li><i class="icon bx bxs-mouse"></i> SCROLL to change size</li>
-      <li><i class="icon bx bx-space-bar"></i> SPACEBAR to copy the CSS</li>
-    </ul>
+    <div id="main-wrapper">
+      <ul id="instructions">
+        <li><i class="icon bx bx-mouse-alt"></i> MOVE your mouse</li>
+        <li><i class="icon bx bx-subdirectory-left"></i> ENTER to change color</li>
+        <li><i class="icon bx bxs-mouse"></i> SCROLL to change size</li>
+        <li><i class="icon bx bx-space-bar"></i> SPACEBAR to copy the CSS</li>
+      </ul>
 
-    <div id="paletteButtons">
-      <button class="palette-button" id="vibrantBtn">Vibrant</button>
-      <button class="palette-button" id="pastelBtn">Pastel</button>
-      <button class="palette-button" id="monochromaticBtn">Monochromatic</button>
-    </div>
+      <div id="paletteButtons">
+        <button class="palette-button" id="vibrantBtn">Vibrant</button>
+        <button class="palette-button" id="pastelBtn">Pastel</button>
+        <button class="palette-button" id="monochromaticBtn">Monochromatic</button>
+      </div>
 
-    <div id="bottom">
-      <div id="builtBy">
-        <p class="signature">
-          Gradientor - Built by
-          <a href="https://github.com/RuDeeVelops" target="_blank">Rodolfo Fanti</a>
-        </p>
-        <p>||</p>
-        <div id="socialIcons">
-          <a href="https://github.com/RuDeeVelops/gradientor-app" target="_blank">
-            <i class="icon bx bxl-github"></i>
-          </a>
-          <a href="https://twitter.com/3DRudy" target="_blank">
-            <i class="icon bx bxl-twitter"></i>
-          </a>
+      <div id="bottom">
+        <div id="builtBy">
+          <p class="signature">
+            Gradientor - Built by
+            <a href="https://github.com/RuDeeVelops" target="_blank">Rodolfo Fanti</a>
+          </p>
+          <p>||</p>
+          <div id="socialIcons">
+            <a href="https://github.com/RuDeeVelops/gradientor-app" target="_blank">
+              <i class="icon bx bxl-github"></i>
+            </a>
+            <a href="https://twitter.com/3DRudy" target="_blank">
+              <i class="icon bx bxl-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div id="customTerminal">
+          <p id="cssOutput">background: radial-gradient(...);</p>
         </div>
       </div>
-
-      <div id="customTerminal">
-        <p id="cssOutput">background: radial-gradient(...);</p>
-      </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

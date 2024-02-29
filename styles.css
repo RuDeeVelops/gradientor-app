@@ -64,16 +64,23 @@ a:focus {
 
 body,
 html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#main-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
   overflow: hidden;
-  cursor: none;
 }
 
 /* ------------------------ Instructions Section ------------------------ */
